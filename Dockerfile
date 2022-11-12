@@ -25,5 +25,6 @@ COPY --from=build /opt/node_modules ./node_modules
 ENV PATH /opt/node_modules/.bin:$PATH
 COPY --from=build /opt/app ./
 EXPOSE 1337
+ENV PORT 1337
 CMD ["npm", "run","start"]
  
